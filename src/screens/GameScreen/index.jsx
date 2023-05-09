@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Card from "../../components/Card";
 import styles from "./styles";
 
-const GameScreen = () => {
+const GameScreen = ({ handleResult }) => {
   const [currentGuess, setCurrentGuess] = useState();
 
   useEffect(() => {
@@ -16,8 +16,8 @@ const GameScreen = () => {
       <Text style={styles.textColor}>The opponent's assumption is</Text>
       <Text style={styles.enemyNumber}>{currentGuess}</Text>
       <Card otherStyles={styles.buttonContainer}>
-        <Button title="Lower" onPress={() => console.log("Lower")} />
-        <Button title="Higher" onPress={() => console.log("Higher")} />
+        <Button title="Lower" onPress={() => handleResult("lower", currentGuess)} />
+        <Button title="Higher" onPress={() => handleResult("higher", currentGuess)} />
       </Card>
     </View>
   );

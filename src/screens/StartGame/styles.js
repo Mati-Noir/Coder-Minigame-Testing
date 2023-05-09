@@ -21,12 +21,16 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   cleanButton: {
-    width: 100,
+    width: "40%",
+    minWidth: 100,
+    maxWidth: 200,
     backgroundColor: colors.disableColor,
     borderRadius: 10,
   },
   confirmStyle: {
-    width: 100,
+    width: "40%",
+    minWidth: 100,
+    maxWidth: 200,
     backgroundColor: colors.actionColor,
     borderRadius: 10,
   },
